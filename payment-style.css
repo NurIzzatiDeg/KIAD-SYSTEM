@@ -1,0 +1,80 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ }
+ body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #dce0e1;
+    margin: 0;
+ }
+.header {
+    background: #1C1F25;
+    width: 100%;
+    color: #fff;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.container{
+    width:750px;
+    height: 500px;
+    background-color: #dce0e1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: space-around;
+    box-shadow: 0 50px 50px #757676;
+ }
+ .container h1{
+    text-align: center;
+ }
+ .first-row{
+    display: flex;
+ }
+ .owner{
+    width: 100%;
+    margin-right: 40px;
+ }
+ .input-field{
+    border: 1px solid #999;
+ }
+ .input-field input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+ }
+ .selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .selection select{
+    padding: 10px 20px;
+ }
+ 
+a{
+    background-color: #D2B48C;
+    color: rgb(254, 237, 237);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+ a:hover{
+    background-color: #c9a576;
+ }
+ .cards img{
+    width: 100px;
+ }

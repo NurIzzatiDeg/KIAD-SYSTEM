@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #F5F5F5;
+  }
+  header {
+    background: #1C1F25;
+    color: #fff;
+    padding: 1px;
+    margin: 0px;
+    height: 150px;
+    text-align: center;
+
+  }
+  header h1 {
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  .barbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .barber {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 10px);
+    text-align: center;
+  }
+  .barber img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .barber h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    font-family: "Playfair Display" sans-serif;
+  }
+  .barber p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+  }
+  .barber a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #D2B48C;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+    background-color: #D2B48C;
+  }
+  .barber a:hover {
+    background: #666;
+  }
+
+  button[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    background-color: #D2B48C;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    top: 10px;
+    left: 700px;
+  }
+  
+body{
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    background-color: #ededed;
+}
+
+.footer {
+    padding: 20px 0;
+    background-color: #1b1c1e;
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+}
+
+.footer ul {
+
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+    line-height: 46px;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+.footer ul a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+}
+.footer .copyright{
+    margin-top: 19px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}

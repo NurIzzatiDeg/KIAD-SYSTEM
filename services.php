@@ -1,0 +1,95 @@
+<?php
+
+$cust_id = $_GET['cust_id'];
+// Establish a MySQLi connection
+$mysqli = new mysqli('localhost', 'root', '', 'dbbarber');
+
+// Check if the connection was successful
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+    exit();
+}
+
+// Retrieve the data from the services table
+$selectQuery = "SELECT service_ID, price, serv_Type FROM service";
+$result = $mysqli->query($selectQuery);
+
+
+// Close the database connection
+$mysqli->close();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="servicess(2).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <section class="header">
+        <img width="200" height="150" src="images/logo-removebg-preview.png"sizes="(max-width: 200px) 100vw, 150px">
+    </section>
+    <section class="middle">
+    <div class="container">
+        <header>
+            <h1>Choose Your Services</h1>
+            <div class="booking">
+               <img src="images/cartBookingIcon.png">
+               <span class="quantity">0</span>
+            </div>
+        </header>
+        <div class="list"></div>
+    </div>
+    
+    <div class="card">
+        <h1>Cart</h1>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <a href="barber.php?cust_id=<?php echo $cust_id?>">
+            <div class="total">0</div>
+            </a>
+            <div class="closeBooking">Close</div>
+        </div>
+    </div>
+    </section>
+
+
+
+    <script src="services(2).js"></script>  
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      
+        <ul class="list">
+            <li class="terms">
+                <a href="#">Terms</a>
+            </li>
+            <li class="privacy"> 
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+      
+       <p class="copyright">
+        Future Coders @ 2023
+       </p>
+        
+    </footer> 
+</body>
+
+</html>

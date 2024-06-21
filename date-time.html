@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI'AD BARBER BOOKING SYSTEM</title>
+    <link rel="stylesheet" href="date-time-style.css">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img width="200" height="150" src="images/logo-removebg-preview.png"sizes="(max-width: 200px) 100vw, 150px">
+    </header>
+    <main>
+      <form id="bookingForm">
+        <div class="input-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="input-group">
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+        <div class="input-group">
+          <label for="notes">Notes:</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <div class="input-group">
+          <button type="submit">Book now</button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      document.getElementById("bookingForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent form submission
+        
+        // Check if the required fields are filled
+        if (validateForm()) {
+          window.location.href = "receipt.html"; // Proceed to the next page
+        } else {
+          alert("Please fill out all the required fields."); // Display an error message
+        }
+      });
+
+      function validateForm() {
+        var date = document.getElementById("date").value;
+        var time = document.getElementById("time").value;
+
+        // Perform additional validation if needed
+        // For example, check if the date and time are in the future
+
+        if (date.trim() === "" || time.trim() === "") {
+          return false; // Return false if any required field is empty
+        }
+        
+        return true; // All required fields are filled
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment-style.css">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>KI'AD BARBER BOOKING SYSTEM</title>
+</head>
+<body>
+    <section class="header">
+        <img width="200" height="150" src="images/logo-removebg-preview.png"sizes="(max-width: 200px) 100vw, 150px">
+    </section>
+    <div class="container">
+        <h1>Make Your Payment</h1>
+        <div class="first-row">
+            <div class="owner">
+                <h3>Card Name</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password">
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>Exp. Date</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                    <select name="years" id="years">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <img src="MasterCard_Logo.svg.png" alt="">
+                    <img src="download.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <a href="Receipt.html" id="payNowBtn">Pay Now!</a>
+    </div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var payNowBtn = document.getElementById("payNowBtn");
+            payNowBtn.addEventListener("click", function(e) {
+                e.preventDefault(); // Prevent the default link behavior
+                
+                // Get the input values
+                var cardName = document.querySelector(".owner input").value;
+                var cvv = document.querySelector(".cvv input").value;
+                var cardNumber = document.querySelector(".card-number input").value;
+                var selectedMonth = document.getElementById("months").value;
+                var selectedYear = document.getElementById("years").value;
+                
+                // Validate the input data
+                if (cardName.trim() === "" || cvv.trim() === "" || cardNumber.trim() === "" || selectedMonth === "" || selectedYear === "") {
+                    alert("Please fill out all the payment details."); // Display an error message
+                } else {
+                    // Redirect to the next page if the payment data is complete
+                    window.location.href = "Receipt.html";
+                }
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

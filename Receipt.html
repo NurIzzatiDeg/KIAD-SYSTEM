@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .center {
+            text-align: center;
+        }
+        .print-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Receipt</h1>
+    <table>
+        <tr>
+            <th>Receipt ID</th>
+            <th>Customer ID</th>
+            <th>Service ID</th>
+            <th>Barber ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td id="receiptId"></td>
+            <td id="customerId"></td>
+            <td id="serviceId"></td>
+            <td id="barberId"></td>
+            <td id="date"></td>
+            <td id="time"></td>
+            <td id="price"></td>
+        </tr>
+    </table>
+    <div class="print-button">
+        <button onclick="window.print()">Print</button>
+    </div>
+
+    <script>
+        // Populate data from JavaScript (replace with your data)
+        var receiptData = {
+            receipt_ID: "123456",
+            cust_id: "CUST123",
+            service_ID: "SERV789",
+            barber_id: "BARB987",
+            date: "2023-07-03",
+            time: "15:30",
+            price: "$25.00"
+        };
+
+        // Set data in the table cells
+        document.getElementById("receiptId").textContent = receiptData.receipt_ID;
+        document.getElementById("customerId").textContent = receiptData.cust_id;
+        document.getElementById("serviceId").textContent = receiptData.service_ID;
+        document.getElementById("barberId").textContent = receiptData.barber_id;
+        document.getElementById("date").textContent = receiptData.date;
+        document.getElementById("time").textContent = receiptData.time;
+        document.getElementById("price").textContent = receiptData.price;
+    </script>
+</body>
+</html>
