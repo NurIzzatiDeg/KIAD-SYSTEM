@@ -7,3 +7,5 @@ Group members:
 4) KIMI
 5) IZZDANIEL
 6) EMIR
+
+EMIR EDIT
